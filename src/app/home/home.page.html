@@ -1,20 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+  <app-header></app-header>
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="leftSide">
+      <h2 class="titleContainer"><strong>Find</strong> all your favorite <strong>Pokemon</strong></h2>
+      <p class="textContainer">You can know the type of Pokemon, its strengths, disadvantages and abilities</p>
+      <ion-button size="large" color="success" class="buttonViewPokemons">See pokemons</ion-button>
+    </div>
+    <div class="rightSide">
+      <img class="pikachuMobile" src="../../assets/PikachuMobile.svg" alt="Imagem do Pikachu" />
+      <img class="pikachuDesktop" src="../../assets/pikachuImage.svg" alt="Imagem do Pikachu" />
+    </div>
   </div>
 </ion-content>
+<app-footer></app-footer>
