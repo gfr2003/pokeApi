@@ -1,0 +1,19 @@
+ion-title{
+    color:rgb(0, 0, 0);
+      a {
+    font-weight: 400;
+    font-size: 20px;
+    color: #212121;
+    cursor: pointer;
+  }
+  a:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px #212121;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  a:hover:after {
+    transform: scaleX(1);
+  }
+}

@@ -1,0 +1,69 @@
+ion-toolbar {
+  --min-height: 93px;
+}
+.anchors {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 1024px) {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: 768px) {
+    display: none
+  }
+  a {
+    font-weight: 400;
+    font-size: 20px;
+    color: #212121;
+    cursor: pointer;
+  }
+  a:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px #212121;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  a:hover:after {
+    transform: scaleX(1);
+  }
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.leftSide {
+  width: 16%;
+  display: flex;
+  justify-content: center;
+  @media only screen and (max-width: 1024px) {
+    width: 25%;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 30%;
+  }
+  img{
+    @media only screen and (max-width: 768px){
+      max-width: 100px;
+      margin-left: 90px;
+    }
+  }
+}
+.rightSide {
+  width: 61%;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width:768px){
+    width: 25%;
+
+  }
+  .menuIcon{
+    display:none;
+    @media only screen and (max-width: 768px){
+      display: flex;
+      font-size: 30px;
+    }
+  }
+}
