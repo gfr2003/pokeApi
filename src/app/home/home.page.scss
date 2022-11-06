@@ -1,19 +1,29 @@
 ion-content {
   --background: linear-gradient(#f5db13, #f2b807);
+  height: 100%;
 }
 #container {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
+  height: 100%;
   @media only screen and (max-width: 1024px) {
     flex-direction: column-reverse;
     align-items: center;
+    height: max-content;
   }
   .pikachuMobile {
+    position: relative;
+    bottom: -55px;
     @media only screen and (min-width: 1025px) {
       display: none;
     }
   }
   .pikachuDesktop {
+    width: max-content;
+    height: 90%;
+    @media only screen and (max-width: 1440px) {
+      height: 75%;
+    }
     @media only screen and (max-width: 1024px) {
       display: none;
     }
@@ -26,10 +36,20 @@ ion-content {
   }
   .leftSide {
     display: flex;
+    width: 30%;
+    height: 75%;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-right: 85px;
+    justify-content: space-evenly;
+
+    @media only screen and (max-width: 1280px) {
+      margin-right: 0px;
+    }
     @media only screen and (max-width: 1024px) {
       width: 730px;
+      align-items: center;
+      margin-right: 0px;
     }
   }
   .titleContainer {
@@ -37,16 +57,22 @@ ion-content {
     font-size: 72px;
     font-weight: 400;
     line-height: 84px;
-    text-align: center;
     letter-spacing: 4px;
+    text-align: left;
+    @media only screen and (max-width: 1024px) {
+      text-align: center;
+    }
   }
   .textContainer {
     color: #000000;
     font-weight: 400;
     line-height: 28px;
-    text-align: center;
+    text-align: left;
     font-size: 24px;
     letter-spacing: 4px;
+    @media only screen and (max-width: 1024px) {
+      text-align: center;
+    }
   }
   .buttonViewPokemons {
     @media only screen and (max-width: 1024px) {
@@ -55,7 +81,8 @@ ion-content {
       font-size: 23px;
       font-weight: 700;
       line-height: 27px;
-      --box-shadow: 0px 10px 10px;
+      --border-radius: 100px;
+      --box-shadow: 0px 10px 10px #1ba000;
     }
   }
 }
